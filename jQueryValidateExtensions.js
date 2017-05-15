@@ -3,13 +3,20 @@
 $().ready(function() {
 
 
-    //Validar con Expresiones Regulares
+    /**********************************/
+    /**********************************/
+    /*INSERT HERE YOUR VALIDATION CODE*/
+    /**********************************/
+    /**********************************/
+
+
+    //Validate Regular Expresions
     $.validator.addMethod("regx", function(value, element, regexpr) {
         return regexpr.test(value);
     }, "Please enter a valid pasword.");
 
 
-    //Validar un Cif
+    //Validate Cif
     $.validator.addMethod("cif", function(value, element) {
         var pares = 0;
         var impares = 0;
@@ -44,7 +51,7 @@ $().ready(function() {
     }, "Por favor inserta un Cif válido.");
 
 
-    //Validar un NIE
+    //Validate Nie
     $.validator.addMethod("nie", function(value, element) {
         value = value.toUpperCase();
         if (!value.match('((^[A-Z]{1}[0-9]{7}[A-Z0-9]{1}$|^[T]{1}[A-Z0-9]{8}$)|^[0-9]{8}[A-Z]{1}$)')) {
@@ -59,6 +66,6 @@ $().ready(function() {
         
         return false;
 
-    }, "Por favor inserta un Cif válido.");
+    }, "Por favor inserta un Nie válido.");
 
 });
